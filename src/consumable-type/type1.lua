@@ -1,7 +1,7 @@
 local amplified = {
 	key = "Amplify",
-	primary_colour = HEX("4F6367"),
-	secondary_colour = HEX("4ABA8D"),
+	primary_colour = HEX("922C51"),
+	secondary_colour = HEX("F72470"),
 	loc_txt =  	{
 			name = 'Amplify', -- used on card type badges
 			collection = 'Amplified Cards', -- label for the button to access the collection
