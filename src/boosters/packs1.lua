@@ -1,5 +1,5 @@
 local create_amplify_card = function(self, card)
-      return create_card("Tarot", G.pack_cards, nil, nil, true, true, nil, nil)
+      return create_card("Amplify", G.pack_cards, nil, nil, true, true, nil, nil)
 end
 
 local pack1 = {

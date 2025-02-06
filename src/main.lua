@@ -34,24 +34,6 @@ else
   sprite()
 end
 
--- BOOSTER PACKS
-local boosters = NFS.getDirectoryItems(mod_dir.."boosters")
-for _, file in ipairs(boosters) do
-    sendDebugMessage("LOADING: "..file)
-    local booster, load_error = SMODS.load_file("boosters/"..file)
-
-    if load_error then
-      sendDebugMessage("AMP ERR: "..load_error)
-    else
-      local curr_booster = booster()
-      if curr_booster.init then curr_booster:init() end
-      
-      for i, item in ipairs(curr_booster.list) do
-        SMODS.Booster(item)
-      end
-    end
-  end
-
 -- LOAD CONSUMABLE SETS --
 local pconsumable_types = NFS.getDirectoryItems(mod_dir.."consumable-type")
 
@@ -89,3 +71,21 @@ for _, file in ipairs(pconsumables) do
     end
   end
 end 
+
+-- BOOSTER PACKS
+local boosters = NFS.getDirectoryItems(mod_dir.."boosters")
+for _, file in ipairs(boosters) do
+    sendDebugMessage("LOADING: "..file)
+    local booster, load_error = SMODS.load_file("boosters/"..file)
+
+    if load_error then
+      sendDebugMessage("AMP ERR: "..load_error)
+    else
+      local curr_booster = booster()
+      if curr_booster.init then curr_booster:init() end
+      
+      for i, item in ipairs(curr_booster.list) do
+        SMODS.Booster(item)
+      end
+    end
+  end

@@ -1,16 +1,17 @@
-local pokeball = {
-	key = "pokeball",
-	set = "Amplified",
+local amplify = {
+	key = "amplify",
+	set = "Amplify",
 	atlas = "cardspack",
 	order = 1,
-	name = "Pokeball",
+	name = "Amplify",
 	pos = {
 			x = 0,
 			y = 0
 	},
 	cost = 4,
 	hidden = false,
-
+	unlocked = true,
+	discovered = true,
 	can_use = function (self, card)
 			return true
 	end,
@@ -20,7 +21,7 @@ local pokeball = {
 	end
 }
 
-local list = {pokeball}
+local list = {amplify}
 
 return {
 	name = "Amplified 1",

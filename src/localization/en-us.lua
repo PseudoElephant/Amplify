@@ -1,29 +1,35 @@
 return {
- descriptions = {
-    Other = {
-        p_amp_amplify_normal_1 = {
-            name = "Amplify Pack",
-            text = {
-                "Choose {C:attention}#1#{} of up to",
-                "{C:attention}#2#{} {C:item}AMP{} Cards{}",
+    descriptions = {
+        Amplify = {
+            c_amp_amplify = {
+                name = "Amplfier",
+                text = {
+                    "Upgrades a random",
+                    "{C:attention}Joker{} card"
+                },
             },
         },
-        p_amp_amplify_jumbo_1 = {
-            name = "Amplify Pack",
-            text = {
-                "Choose {C:attention}#1#{} of up to",
-                "{C:attention}#2#{} {C:item}AMP{} Cards{}",
-            },
-        },
+       Other = {
+           p_amp_amplify_normal_1 = {
+               name = "Amplify Pack",
+               text = {
+                   "Choose {C:attention}#1#{} of up to",
+                   "{C:attention}#2#{} {C:item}AMP{} Cards{}",
+               },
+           },
+           p_amp_amplify_jumbo_1 = {
+               name = "Amplify Pack",
+               text = {
+                   "Choose {C:attention}#1#{} of up to",
+                   "{C:attention}#2#{} {C:item}AMP{} Cards{}",
+               },
+           },
+       },
     },
-    Amplified = {
-        c_amp_pokeball = {
-            name = "Pokéball",
-            text = {
-                "Create a random",
-                "{C:attention}Basic Joker{} card",
-                "{C:inactive}(Must have room)"
-            },
-        },
+    misc = {
+        disctionary = {
+            b_amplify_cards = "Item Cards",
+        }
     }
+      
 }
