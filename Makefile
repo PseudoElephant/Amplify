@@ -8,7 +8,7 @@ RUN_SCRIPT=/Users/$(USER)/Library/Application\ Support/Steam/steamapps/common/Ba
 
 clean:
 	rm -rf build
-	rm -rf $(MODS_PATH)/$(ID)-$(VERSION)
+	rm -rf $(MODS_PATH)/$(ID)
 
 build:
 	mkdir -p build/$(ID)/
@@ -28,6 +28,6 @@ extract-source:
 	unzip SOURCE.zip -d source
 	rm SOURCE.zip
 
-run:
+run: clean install
 	ps aux | grep Balatro | grep -v grep | awk '{print $$2}' | xargs kill -9
 	sh $(RUN_SCRIPT)
