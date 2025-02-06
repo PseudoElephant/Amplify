@@ -1,0 +1,17 @@
+{
+	"id": "Amplifier",
+	"name": "Amplifier",
+	"display_name": "IU",
+	"author": ["Pseudo Elephant"],
+	"description": "Allows upgrading jokers",
+	"prefix": "PE_AMPLIFY_",
+	"main_file": "main.lua",
+	"priority": 999999999999999999999999,
+	"badge_colour": "FF230A",
+	"badge_text_colour": "ABC123",
+	"version": "1.0.0",
+	"dependencies": [
+        "Steamodded (>=1.*)",
+        "Lovely (>=0.7)"
+    ]
+}
