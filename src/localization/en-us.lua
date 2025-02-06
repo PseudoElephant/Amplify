@@ -5,14 +5,14 @@ return {
             name = "Amplify Pack",
             text = {
                 "Choose {C:attention}#1#{} of up to",
-                "{C:attention}#2#{} {C:pink}AMP Cards{}",
+                "{C:attention}#2#{} {C:item}AMP{} Cards{}",
             },
         },
         p_amp_amplify_jumbo_1 = {
             name = "Amplify Pack",
             text = {
                 "Choose {C:attention}#1#{} of up to",
-                "{C:attention}#2#{} {C:pink}AMP Cards{}",
+                "{C:attention}#2#{} {C:item}AMP{} Cards{}",
             },
         },
     }
