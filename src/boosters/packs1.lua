@@ -12,7 +12,7 @@ local pack1 = {
 	cost = 4,
 	order = 1,
 	weight = 1,
-  draw_hand = true,
+  draw_hand = false,
   unlocked = true,
   discovered = true,
 
@@ -37,7 +37,7 @@ local pack2 = {
   cost = 4,
   order = 2,
   weight = 1,
-  draw_hand = true,
+  draw_hand = false,
   unlocked = true,
   discovered = true,
 
@@ -62,7 +62,7 @@ local pack3 = {
     cost = 6,
     order = 3,
     weight = 1,
-    draw_hand = true,
+    draw_hand = false,
     unlocked = true,
     discovered = true,
 
@@ -87,7 +87,7 @@ local pack3 = {
     cost = 8,
     order = 4,
     weight = 0.25,
-    draw_hand = true,
+    draw_hand = false,
     unlocked = true,
     discovered = true,
 
