@@ -1,10 +1,10 @@
 {
 	"id": "Amplifier",
 	"name": "Amplifier",
-	"display_name": "IU",
+	"display_name": "AMP",
 	"author": ["Pseudo Elephant"],
 	"description": "Allows upgrading jokers",
-	"prefix": "PE_AMPLIFY_",
+	"prefix": "amp",
 	"main_file": "main.lua",
 	"priority": 999999999999999999999999,
 	"badge_colour": "FF230A",
