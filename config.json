@@ -7,7 +7,7 @@
 	"prefix": "amp",
 	"main_file": "main.lua",
 	"priority": 999999999999999999999999,
-	"badge_colour": "FF69B4",
+	"badge_colour": "F72470",
 	"badge_text_colour": "FFFFFF",
 	"version": "1.0.0",
 	"dependencies": [

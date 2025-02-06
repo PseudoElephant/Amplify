@@ -15,6 +15,15 @@ return {
                 "{C:attention}#2#{} {C:item}AMP{} Cards{}",
             },
         },
+    },
+    Amplified = {
+        c_amp_pokeball = {
+            name = "Pokéball",
+            text = {
+                "Create a random",
+                "{C:attention}Basic Joker{} card",
+                "{C:inactive}(Must have room)"
+            },
+        },
     }
- }
 }
