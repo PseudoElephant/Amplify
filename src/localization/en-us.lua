@@ -12,7 +12,8 @@ return {
             c_amp_radio = {
                 name = "Radio",
                 text = {
-                    "TODO",
+                    "{C:attention}Doubles{} stats of",
+                    "a random Joker",
                 },
             },
             c_amp_speaker = {

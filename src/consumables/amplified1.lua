@@ -13,17 +13,30 @@ local radio = {
 	unlocked = true,
 	discovered = true,
 	can_use = function (self, card)
-			return true
+			return #G.jokers.cards > 0
 	end,
 
 	use = function (self, card, area, copier)
 		local chosen_joker = pseudorandom_element(G.jokers.cards, pseudoseed('amp'))
 
-		-- increase extra stats
-		-- print object chosen_joker.ability.extra
+		sendDebugMessage("Chosen joker: " .. inspect(chosen_joker.ability))
 
-		sendDebugMessage("Amplify: The Radio".. inspect(chosen_joker.ability.extra))
+		if type(chosen_joker.ability.extra) == "table" then
+			for k, v in pairs(chosen_joker.ability.extra) do
+				if type(v) == "number" then
+					chosen_joker.ability.extra[k] = v * 2
+				end
+			end
+		elseif type(chosen_joker.ability.extra) == "number" then
+			chosen_joker.ability.extra = chosen_joker.ability.extra * 2
+		end
 
+		chosen_joker.ability.bonus = chosen_joker.ability.bonus * 2
+		chosen_joker.ability.mult = chosen_joker.ability.mult * 2
+		chosen_joker.ability.t_chips = chosen_joker.ability.t_chips * 2
+		chosen_joker.ability.t_mult = chosen_joker.ability.t_mult * 2
+
+		chosen_joker:juice_up(0.3, 0.5)
 		return 
 	end
 }
