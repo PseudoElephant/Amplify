@@ -7,7 +7,7 @@ local amplifydeck = {
 	order = 50,
   	unlocked = true,
   	discovered = true,
-	config = {consumables = {'c_amp_radio', 'c_amp_radio'}},
+	config = {consumables = {'c_amp_radio', 'c_amp_balanced'}},
   loc_vars = function(self, info_queue, center)
     return {vars = {}}
   end,

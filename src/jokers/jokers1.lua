@@ -26,14 +26,14 @@ local gambler ={
     end,
     add_to_deck = function(self, card, from_debuff)
       if not from_debuff then
-        G.hand:change_size(card.ability.extra.h_size)
+        -- G.hand:change_size(card.ability.extra.h_size)
       end
 
 
     end,
     remove_from_deck = function(self, card, from_debuff)
       if not from_debuff then
-        G.hand:change_size(-card.ability.extra.h_size)
+        -- G.hand:change_size(-card.ability.extra.h_size)
       end
     end
   }

@@ -297,21 +297,89 @@ local balanced = {
 	unlocked = true,
 	discovered = true,
 	can_use = function (self, card)
-			return true
+			return #G.jokers.cards > 0
 	end,
 
 	use = function (self, card, area, copier)
-		-- Balances stats across hand
-		local total_stats = 0
-		local num_cards = #area.hand
-		for _, hand_card in ipairs(area.hand) do
-			total_stats = total_stats + hand_card.stats
+		local jokers = G.jokers.cards
+
+		local stats = {
+			bonus = {
+				value = 0,
+				times = 0
+			}
+			mult = {
+				value = 0,
+				times = 0
+			}
+			t_chips = {
+				value = 0,
+				times = 0
+			}
+			t_mult = {
+				value = 0,
+				times = 0
+			}
+		}
+
+		local extra = {}
+
+		local average = function(stat)
+			return stat.value / stat.times
 		end
-		local average_stats = total_stats / num_cards
-		for _, hand_card in ipairs(area.hand) do
-			hand_card.stats = average_stats
+
+		for i, joker in ipairs(jokers) do
+			for stat, value in pairs(stats) do
+				sendDebugMessage("Stat: " .. stat .. " Value: " .. value)
+				sendDebugMessage("Joker ability: " .. inspect(joker.ability))
+				if type(joker.ability[stat]) == "number" then
+					stats[stat].value = stats[stat].value + joker.abilit[stat]
+					stats[stat].times = stats[stat].times + 1
+				end
+			end
+
+			if type(joker.ability.extra) == "table" then
+				for stat, value in pairs(joker.ability.extra) do
+					if type(value) == "number" and not stat:find("^h_") then
+						if not extra[stat] then
+							extra[stat] = {
+								value = value,
+								times = 1
+							}
+						else
+							extra[stat].value = extra[stat].value + value
+							extra[stat].times = extra[stat].times + 1
+						end
+					end
+				end
+			end
 		end
-		return 
+
+		for stat, value in pairs(stats) do
+			stats[stat] = average(value)
+		end
+
+		for stat, value in pairs(extra) do
+			extra[stat] = average(value)
+		end
+
+		for i, joker in ipairs(jokers) do
+			for stat, value in pairs(stats) do
+				joker.ability[stat] = value.value
+			end
+
+			if type(joker.ability.extra) == "table" then
+				for stat, value in pairs(extra) do
+					if joker.ability.extra[stat] then
+						joker.ability.extra[stat] = value.value
+					end
+				end
+			end
+
+			joker:juice_up(0.3, 0.5)
+			card_eval_status_text(joker, 'extra', nil, nil, nil,
+				{ message = localize('k_balanced') })
+		end
 	end
 }
 
