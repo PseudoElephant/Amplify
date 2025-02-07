@@ -89,3 +89,22 @@ for _, file in ipairs(boosters) do
       end
     end
   end
+
+-- JOKERS
+
+local jokers = NFS.getDirectoryItems(mod_dir.."jokers")
+for _, file in ipairs(jokers) do
+	sendDebugMessage("LOADING: "..file)
+	local joker, load_error = SMODS.load_file("jokers/"..file)
+
+	if load_error then
+	  sendDebugMessage("AMP ERR: "..load_error)
+	else
+	  local curr_joker = joker()
+	  if curr_joker.init then curr_joker:init() end
+	  
+	  for i, item in ipairs(curr_joker.list) do
+		SMODS.Joker(item)
+	  end
+	end
+  end

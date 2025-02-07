@@ -101,6 +101,14 @@ return {
                 },
             },
         },
+        Joker = {
+            j_amp_gambler = {
+                name = "Gambler",
+                text = {
+                   "TODO",
+                },
+            },
+        },
     },
     misc = {
         disctionary = {
