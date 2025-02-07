@@ -8,7 +8,7 @@ local amplified = {
 		},
 	collection_row = {6, 6},
 	shop_rate = 2,
-	default = "c_amp_amplify"
+	default = "c_amp_radio"
 }
 
 return {
