@@ -1,5 +1,5 @@
-local the_radio = {
-	key = "the_radio",
+local radio = {
+	key = "radio",
 	set = "Amplify",
 	atlas = "cardspack",
 	order = 1,
@@ -21,8 +21,8 @@ local the_radio = {
 	end
 }
 
-local the_speaker = {
-	key = "the_speaker",
+local speaker = {
+	key = "speaker",
 	set = "Amplify",
 	atlas = "cardspack",
 	order = 2,
@@ -44,8 +44,8 @@ local the_speaker = {
 	end
 }
 
-local the_headphones = {
-	key = "the_headphones",
+local headphones = {
+	key = "headphones",
 	set = "Amplify",
 	atlas = "cardspack",
 	order = 3,
@@ -67,8 +67,8 @@ local the_headphones = {
 	end
 }
 
-local the_antenna = {
-	key = "the_antenna",
+local antenna = {
+	key = "antenna",
 	set = "Amplify",
 	atlas = "cardspack",
 	order = 4,
@@ -90,8 +90,8 @@ local the_antenna = {
 	end
 }
 
-local the_satellite_dish = {
-	key = "the_satellite_dish",
+local satellite_dish = {
+	key = "satellite_dish",
 	set = "Amplify",
 	atlas = "cardspack",
 	order = 5,
@@ -113,8 +113,8 @@ local the_satellite_dish = {
 	end
 }
 
-local the_megaphone = {
-	key = "the_megaphone",
+local megaphone = {
+	key = "megaphone",
 	set = "Amplify",
 	atlas = "cardspack",
 	order = 6,
@@ -136,8 +136,8 @@ local the_megaphone = {
 	end
 }
 
-local the_microphone = {
-	key = "the_microphone",
+local microphone = {
+	key = "microphone",
 	set = "Amplify",
 	atlas = "cardspack",
 	order = 7,
@@ -159,8 +159,8 @@ local the_microphone = {
 	end
 }
 
-local the_record_player = {
-	key = "the_record_player",
+local record_player = {
+	key = "record_player",
 	set = "Amplify",
 	atlas = "cardspack",
 	order = 8,
@@ -182,8 +182,8 @@ local the_record_player = {
 	end
 }
 
-local the_tuning_fork = {
-	key = "the_tuning_fork",
+local tuning_fork = {
+	key = "tuning_fork",
 	set = "Amplify",
 	atlas = "cardspack",
 	order = 9,
@@ -205,8 +205,8 @@ local the_tuning_fork = {
 	end
 }
 
-local the_walkie_talkie = {
-	key = "the_walkie_talkie",
+local walkie_talkie = {
+	key = "walkie_talkie",
 	set = "Amplify",
 	atlas = "cardspack",
 	order = 10,
@@ -285,16 +285,16 @@ local balanced = {
 }
 
 local list = {
-	the_radio,
-	the_speaker,
-	the_headphones,
-	the_antenna,
-	the_satellite_dish,
-	the_megaphone,
-	the_microphone,
-	the_record_player,
-	the_tuning_fork,
-	the_walkie_talkie,
+	radio,
+	speaker,
+	headphones,
+	antenna,
+	satellite_dish,
+	megaphone,
+	microphone,
+	record_player,
+	tuning_fork,
+	walkie_talkie,
 	amplified,
 	balanced
 }

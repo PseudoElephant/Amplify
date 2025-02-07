@@ -1,62 +1,70 @@
 return {
     descriptions = {
+        Back = {
+            b_amp_amplifydeck = {
+                name = "Amplify Deck",
+                text = {
+                    "Debug deck for Amplify Cards"
+                },
+            }
+        },
         Amplify = {
-            c_amp_the_radio = {
-                name = "The Radio",
+            c_amp_radio = {
+                name = "Radio",
                 text = {
                     "TODO",
                 },
             },
-            c_amp_the_speaker = {
-                name = "The Speaker",
+            c_amp_speaker = {
+                name = "Speaker",
                 text = {
                     "TODO",
                 },
             },
-            c_amp_the_headphones = {
-                name = "The Headphones",
+            c_amp_headphones = {
+                name = "Headphones",
                 text = {
                     "TODO",
                 },
             },
-            c_amp_the_antenna = {
-                name = "The Antenna",
+            c_amp_antenna = {
+                name = "Antenna",
                 text = {
                     "TODO",
                 },
             },
-            c_amp_the_satellite_dish = {
-                name = "The Satellite Dish",
+            c_amp_satellite_dish = {
+                name = "Satellite Dish",
                 text = {
                     "TODO",
                 },
             },
-            c_amp_the_megaphone = {
-                name = "The Megaphone",
+            c_amp_megaphone = {
+                name = "Megaphone",
                 text = {
                     "TODO",
                 },
             },
-            c_amp_the_microphone = {
-                name = "The Microphone",
+            c_amp_microphone = {
+                name = "Microphone",
                 text = {
                     "TODO",
                 },
             },
-            c_amp_the_record_player = {
-                name = "The Record Player",
+            c_amp_record_player = {
+                name = "Record Player",
                 text = {
                     "TODO",
                 },
             },
-            c_amp_the_tuning_fork = {
-                name = "The Tuning Fork",
+            c_amp_tuning_fork = {
+                name = "Tuning Fork",
                 text = {
                     "TODO",
                 },
             },
-            c_amp_the_walkie_talkie = {
-                name = "The Walkie Talkie",
+            c_amp_walkie_talkie = {
+                name = "Walkie Talkie",
                 text = {
                     "TODO",
                 },

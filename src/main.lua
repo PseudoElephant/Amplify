@@ -91,7 +91,6 @@ for _, file in ipairs(boosters) do
   end
 
 -- JOKERS
-
 local jokers = NFS.getDirectoryItems(mod_dir.."jokers")
 for _, file in ipairs(jokers) do
 	sendDebugMessage("LOADING: "..file)
@@ -107,4 +106,21 @@ for _, file in ipairs(jokers) do
 		SMODS.Joker(item)
 	  end
 	end
+end
+
+-- DECKS/BACKS
+local backs = NFS.getDirectoryItems(mod_dir.."backs")
+for _, file in ipairs(backs) do
+  sendDebugMessage("The file is: "..file)
+  local back, load_error = SMODS.load_file("backs/"..file)
+  if load_error then
+    sendDebugMessage("The error is: "..load_error)
+  else
+    local curr_back = back()
+    if curr_back.init then curr_back:init() end
+    
+    for i, item in ipairs(curr_back.list) do
+      SMODS.Back(item)
+    end
   end
+end
