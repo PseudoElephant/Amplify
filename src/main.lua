@@ -119,7 +119,7 @@ for _, file in ipairs(backs) do
     local curr_back = back()
     if curr_back.init then curr_back:init() end
     
-    for i, item in ipairs(curr_back.list) do
+    for _, item in ipairs(curr_back.list) do
       SMODS.Back(item)
     end
   end

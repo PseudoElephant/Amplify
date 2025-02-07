@@ -17,6 +17,13 @@ local radio = {
 	end,
 
 	use = function (self, card, area, copier)
+		local chosen_joker = pseudorandom_element(G.jokers.cards, pseudoseed('amp'))
+
+		-- increase extra stats
+		-- print object chosen_joker.ability.extra
+
+		sendDebugMessage("Amplify: The Radio".. inspect(chosen_joker.ability.extra))
+
 		return 
 	end
 }
