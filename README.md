@@ -5,10 +5,10 @@ To play this mod you will first need to install lovely and steammodded. You can 
 
 Once done, you can download the latest build and add the contents of the zip file to your 'Mods' folder. Should look something like: 
 
-📁 Mods
-|  📁 Amplify <-- Add the mod folder here (_not_ the zip)
-|  📁 lovely
-|  📁 smods
+📁 Mods     
+|  📁 Amplify <-- Add the mod folder here (_not_ the zip)     
+|  📁 lovely     
+|  📁 smods     
 
 After that, you should be able to run Balatro and play the game with the mod installed. Hope you enjoy it! 
 
@@ -26,13 +26,13 @@ We will not go into detail on how to install these, but in most cases `brew inst
 ### Using the Project's Development Tools
 To use any of the tools below you need to be in the root project folder of the project.
 
-#### Run
+#### :Run
 Description: This will install the current version of the source code into Balatro and run a game instance.
 
 MacOS: `make run`
 Windows: `./build.bat run` note: you might have to change the STEAM_LIBRARY variable at the top. This will be fixed later.
 
-#### Extract Source Code
+#### :Extract-Source
 Description: This will extract Balatro's source code and add it as `/source` into the parent directory.
 
 MacOS: `make extract-source`
