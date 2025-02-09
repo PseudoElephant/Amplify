@@ -3,9 +3,9 @@ local radio = {
 	set = "Amplify",
 	atlas = "cardspack",
 	order = 1,
-	name = "The Radio",
+	name = "Radio",
 	pos = {
-			x = 0,
+			x = 9,
 			y = 0
 	},
 	cost = 4,
@@ -57,9 +57,9 @@ local speaker = {
 	set = "Amplify",
 	atlas = "cardspack",
 	order = 2,
-	name = "The Speaker",
+	name = "Speaker",
 	pos = {
-			x = 1,
+			x = 13,
 			y = 0
 	},
 	cost = 4,
@@ -80,10 +80,10 @@ local headphones = {
 	set = "Amplify",
 	atlas = "cardspack",
 	order = 3,
-	name = "The Headphones",
+	name = "Headphones",
 	pos = {
-			x = 1,
-			y = 1
+			x = 5,
+			y = 0
 	},
 	cost = 4,
 	hidden = false,
@@ -103,10 +103,33 @@ local antenna = {
 	set = "Amplify",
 	atlas = "cardspack",
 	order = 4,
-	name = "The Antenna",
+	name = "Antenna",
 	pos = {
-			x = 0,
-			y = 1
+			x = 1,
+			y = 0
+	},
+	cost = 4,
+	hidden = false,
+	unlocked = true,
+	discovered = true,
+	can_use = function (self, card)
+			return true
+	end,
+
+	use = function (self, card, area, copier)
+		return 
+	end
+}
+
+local sonar = {
+	key = "sonar",
+	set = "Amplify",
+	atlas = "cardspack",
+	order = 12,
+	name = "Sonar",
+	pos = {
+			x = 12,
+			y = 0
 	},
 	cost = 4,
 	hidden = false,
@@ -126,9 +149,9 @@ local satellite_dish = {
 	set = "Amplify",
 	atlas = "cardspack",
 	order = 5,
-	name = "The Satellite Dish",
+	name = "Satellite Dish",
 	pos = {
-			x = 2,
+			x = 11,
 			y = 0
 	},
 	cost = 4,
@@ -149,10 +172,10 @@ local megaphone = {
 	set = "Amplify",
 	atlas = "cardspack",
 	order = 6,
-	name = "The Megaphone",
+	name = "Megaphone",
 	pos = {
-			x = 2,
-			y = 1
+			x = 6,
+			y = 0
 	},
 	cost = 4,
 	hidden = false,
@@ -172,10 +195,33 @@ local microphone = {
 	set = "Amplify",
 	atlas = "cardspack",
 	order = 7,
-	name = "The Microphone",
+	name = "Microphone",
 	pos = {
-			x = 1,
-			y = 2
+			x = 7,
+			y = 0
+	},
+	cost = 4,
+	hidden = false,
+	unlocked = true,
+	discovered = true,
+	can_use = function (self, card)
+			return true
+	end,
+
+	use = function (self, card, area, copier)
+		return 
+	end
+}
+
+local oscillator = {
+	key = "oscillator",
+	set = "Amplify",
+	atlas = "cardspack",
+	order = 13,
+	name = "Oscillator",
+	pos = {
+			x = 8,
+			y = 0
 	},
 	cost = 4,
 	hidden = false,
@@ -195,10 +241,10 @@ local record_player = {
 	set = "Amplify",
 	atlas = "cardspack",
 	order = 8,
-	name = "The Record Player",
+	name = "Record Player",
 	pos = {
-			x = 2,
-			y = 2
+			x = 10,
+			y = 0
 	},
 	cost = 4,
 	hidden = false,
@@ -218,9 +264,9 @@ local tuning_fork = {
 	set = "Amplify",
 	atlas = "cardspack",
 	order = 9,
-	name = "The Tuning Fork",
+	name = "Tuning Fork",
 	pos = {
-			x = 3,
+			x = 14,
 			y = 0
 	},
 	cost = 4,
@@ -240,8 +286,54 @@ local walkie_talkie = {
 	key = "walkie_talkie",
 	set = "Amplify",
 	atlas = "cardspack",
-	order = 10,
-	name = "The Walkie Talkie",
+	order = 11,
+	name = "Walkie Talkie",
+	pos = {
+			x = 15,
+			y = 0
+	},
+	cost = 4,
+	hidden = false,
+	unlocked = true,
+	discovered = true,
+	can_use = function (self, card)
+			return true
+	end,
+
+	use = function (self, card, area, copier)
+		return 
+	end
+}
+
+local echo = {
+	key = "echo",
+	set = "Amplify",
+	atlas = "cardspack",
+	order = 14,
+	name = "Echo",
+	pos = {
+			x = 3,
+			y = 0
+	},
+	cost = 4,
+	hidden = false,
+	unlocked = true,
+	discovered = true,
+	can_use = function (self, card)
+			return true
+	end,
+
+	use = function (self, card, area, copier)
+		return 
+	end
+}
+
+local equalizer = {
+	key = "equalizer",
+	set = "Amplify",
+	atlas = "cardspack",
+	order = 15,
+	name = "Equalizer",
 	pos = {
 			x = 4,
 			y = 0
@@ -263,10 +355,10 @@ local amplified = {
 	key = "amplified",
 	set = "Amplify",
 	atlas = "cardspack",
-	order = 11,
+	order = 16,
 	name = "Amplified",
 	pos = {
-			x = 5,
+			x = 0,
 			y = 0
 	},
 	cost = 4,
@@ -286,10 +378,10 @@ local balanced = {
 	key = "balanced",
 	set = "Amplify",
 	atlas = "cardspack",
-	order = 12,
+	order = 10,
 	name = "Balanced",
 	pos = {
-			x = 6,
+			x = 2,
 			y = 0
 	},
 	cost = 4,
@@ -307,15 +399,15 @@ local balanced = {
 			bonus = {
 				value = 0,
 				times = 0
-			}
+			},
 			mult = {
 				value = 0,
 				times = 0
-			}
+			},
 			t_chips = {
 				value = 0,
 				times = 0
-			}
+			},
 			t_mult = {
 				value = 0,
 				times = 0
@@ -387,6 +479,10 @@ local list = {
 	radio,
 	speaker,
 	headphones,
+	echo,
+	equalizer,
+	oscillator,
+	sonar,
 	antenna,
 	satellite_dish,
 	megaphone,

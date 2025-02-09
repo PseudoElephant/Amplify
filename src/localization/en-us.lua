@@ -83,6 +83,30 @@ return {
                     "Balances stats across hand",
                 },
             },
+            c_amp_sonar = {
+                name = "Sonar",
+                text = {
+                    "TODO",
+                },
+            },
+            c_amp_oscillator = {
+                name = "Oscillator",
+                text = {
+                    "TODO",
+                },
+            },
+            c_amp_echo = {
+                name = "Echo",
+                text = {
+                    "TODO",
+                },
+            },
+            c_amp_equalizer = {
+                name = "Equalizer",
+                text = {
+                    "TODO",
+                },
+            }
         },
         Other = {
             p_amp_amplify_normal_1 = {
