@@ -414,7 +414,7 @@ local balanced = {
 			}
 		}
 
-		local defaultExtraKey <const> = "pe_default"
+		local defaultExtraKey = "pe_default"
 		local extra = {}
 
 		local average = function(stat)
@@ -425,7 +425,7 @@ local balanced = {
 			for stat, value in pairs(stats) do
 				sendDebugMessage("Joker ability: " .. inspect(joker.ability))
 				if type(joker.ability[stat]) == "number" then
-					stats[stat].value = stats[stat].value + joker.abilit[stat]
+					stats[stat].value = stats[stat].value + joker.ability[stat]
 					stats[stat].times = stats[stat].times + 1
 				end
 			end
@@ -449,11 +449,11 @@ local balanced = {
 			if type(joker.ability.extra) == "number" then
 				if not extra[defaultExtraKey] then
 					extra[defaultExtraKey] = {
-						value = value,
+						value = joker.ability.extra,
 						times = 1
 					}
 				else
-					extra[defaultExtraKey].value = extra[defaultExtraKey].value + value
+					extra[defaultExtraKey].value = extra[defaultExtraKey].value + joker.ability.extra
 					extra[defaultExtraKey].times = extra[defaultExtraKey].times + 1
 				end
 			end
