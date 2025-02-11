@@ -8,6 +8,9 @@ local amplifydeck = {
 	unlocked = true,
 	discovered = true,
 	config = {
+		jokers = {
+			"j_amp_gambler"
+		},
 		consumables = {
 			"c_amp_radio", 
 			"c_amp_speaker", 
@@ -28,6 +31,28 @@ local amplifydeck = {
 		}, 
 		dollars=10000
 	},
+
+	apply = function(self, back) 
+		sendDebugMessage("Apply Amplify Deck Jokers: " .. inspect(back))
+		if back.effect.config.jokers then
+			delay(0.4)
+			G.E_MANAGER:add_event(Event({
+				func = function()
+						G.E_MANAGER:add_event(Event({
+							func = function()
+									for k, v in ipairs(back.effect.config.jokers) do
+										local card = create_card('Joker', G.jokers, nil, nil, nil, nil, v, 'deck')
+										card:add_to_deck()
+										G.jokers:emplace(card)
+									end
+								return true
+							end
+						}))
+					return true
+				end
+			}))
+		end
+	end,
 
   loc_vars = function(self, info_queue, center)
     return {vars = {}}
