@@ -259,12 +259,12 @@ local record_player = {
 	end
 }
 
-local tuning_fork = {
-	key = "tuning_fork",
+local soundboard = {
+	key = "soundboard",
 	set = "Amplify",
 	atlas = "cardspack",
 	order = 9,
-	name = "Tuning Fork",
+	name = "Soundboard",
 	pos = {
 			x = 14,
 			y = 0
@@ -282,12 +282,12 @@ local tuning_fork = {
 	end
 }
 
-local walkie_talkie = {
-	key = "walkie_talkie",
+local tape_recorder = {
+	key = "tape_recorder",
 	set = "Amplify",
 	atlas = "cardspack",
 	order = 11,
-	name = "Walkie Talkie",
+	name = "Tape Recorder",
 	pos = {
 			x = 15,
 			y = 0
@@ -374,12 +374,12 @@ local amplified = {
 	end
 }
 
-local balanced = {
-	key = "balanced",
+local tuning_fork = {
+	key = "tuning_fork",
 	set = "Amplify",
 	atlas = "cardspack",
 	order = 10,
-	name = "Balanced",
+	name = "Tuning Fork",
 	pos = {
 			x = 2,
 			y = 0
@@ -486,7 +486,7 @@ local balanced = {
 
 			joker:juice_up(0.3, 0.5)
 			card_eval_status_text(joker, 'extra', nil, nil, nil,
-				{ message = localize('k_balanced') })
+				{ message = localize('k_tuning_fork') })
 		end
 	end
 }
@@ -504,10 +504,10 @@ local list = {
 	megaphone,
 	microphone,
 	record_player,
-	tuning_fork,
-	walkie_talkie,
+	soundboard,
+	tape_recorder,
 	amplified,
-	balanced
+	tuning_fork
 }
 
 return {

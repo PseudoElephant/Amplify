@@ -58,14 +58,14 @@ return {
                     "TODO",
                 },
             },
-            c_amp_tuning_fork = {
-                name = "Tuning Fork",
+            c_amp_soundboard = {
+                name = "Soundboard",
                 text = {
                     "TODO",
                 },
             },
-            c_amp_walkie_talkie = {
-                name = "Walkie Talkie",
+            c_amp_tape_recorder = {
+                name = "Tape Recorder",
                 text = {
                     "TODO",
                 },
@@ -77,8 +77,8 @@ return {
                     "[if possible]",
                 },
             },
-            c_amp_balanced = {
-                name = "Balanced",
+            c_amp_tuning_fork = {
+                name = "Tuning Fork",
                 text = {
                     "Balances stats across hand",
                 },
