@@ -414,6 +414,7 @@ local balanced = {
 			}
 		}
 
+		local defaultExtraKey <const> = "pe_default"
 		local extra = {}
 
 		local average = function(stat)
@@ -422,7 +423,6 @@ local balanced = {
 
 		for i, joker in ipairs(jokers) do
 			for stat, value in pairs(stats) do
-				sendDebugMessage("Stat: " .. stat .. " Value: " .. value)
 				sendDebugMessage("Joker ability: " .. inspect(joker.ability))
 				if type(joker.ability[stat]) == "number" then
 					stats[stat].value = stats[stat].value + joker.abilit[stat]
@@ -445,6 +445,18 @@ local balanced = {
 					end
 				end
 			end
+
+			if type(joker.ability.extra) == "number" then
+				if not extra[defaultExtraKey] then
+					extra[defaultExtraKey] = {
+						value = value,
+						times = 1
+					}
+				else
+					extra[defaultExtraKey].value = extra[defaultExtraKey].value + value
+					extra[defaultExtraKey].times = extra[defaultExtraKey].times + 1
+				end
+			end
 		end
 
 		for stat, value in pairs(stats) do
@@ -457,15 +469,19 @@ local balanced = {
 
 		for i, joker in ipairs(jokers) do
 			for stat, value in pairs(stats) do
-				joker.ability[stat] = value.value
+				joker.ability[stat] = value
 			end
 
 			if type(joker.ability.extra) == "table" then
 				for stat, value in pairs(extra) do
 					if joker.ability.extra[stat] then
-						joker.ability.extra[stat] = value.value
+						joker.ability.extra[stat] = value
 					end
 				end
+			end
+
+			if type(joker.ability.extra) == "number" then
+				joker.ability.extra = extra[defaultExtraKey]
 			end
 
 			joker:juice_up(0.3, 0.5)
