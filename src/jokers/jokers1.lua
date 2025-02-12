@@ -1,6 +1,6 @@
-local gambler ={ 
-    key = "gambler",
-    name = "gambler",
+local duper ={ 
+    key = "duper",
+    name = "Duper",
     pos = {x = 0, y = 0},
     config = {extra = {h_size = 1}},
     rarity = 1, 
@@ -10,74 +10,14 @@ local gambler ={
     unlocked = true,
     discovered = true,
     calculate = function(self, card, context)
-     if context.setting_blind and not self.getting_sliced then
+      if context.using_consumeable and (context.consumeable.ability.set == "Amplify") then
         G.E_MANAGER:add_event(Event({
             func = function()
-                local card = create_card("Amplify", G.pack_cards, nil, nil, true, true, "c_amp_radio", nil)
-                card:add_to_deck()
-                G.consumeables:emplace(card)
-                
-                local card = create_card("Amplify", G.pack_cards, nil, nil, true, true, "c_amp_speaker", nil)
-                card:add_to_deck()
-                G.consumeables:emplace(card)
+              local card = create_card("Amplify", G.pack_cards, nil, nil, true, true, context.consumeable.config.center_key, nil)
+              card:add_to_deck()
+              G.consumeables:emplace(card)
 
-                local card = create_card("Amplify", G.pack_cards, nil, nil, true, true, "c_amp_headphones", nil)
-                card:add_to_deck()
-                G.consumeables:emplace(card)
-
-                local card = create_card("Amplify", G.pack_cards, nil, nil, true, true, "c_amp_antenna", nil)
-                card:add_to_deck()
-                G.consumeables:emplace(card)
-
-                local card = create_card("Amplify", G.pack_cards, nil, nil, true, true, "c_amp_sonar", nil)
-                card:add_to_deck()
-                G.consumeables:emplace(card)
-
-                local card = create_card("Amplify", G.pack_cards, nil, nil, true, true, "c_amp_satellite_dish", nil)
-                card:add_to_deck()
-                G.consumeables:emplace(card)
-
-                local card = create_card("Amplify", G.pack_cards, nil, nil, true, true, "c_amp_megaphone", nil)
-                card:add_to_deck()
-                G.consumeables:emplace(card)
-
-                local card = create_card("Amplify", G.pack_cards, nil, nil, true, true, "c_amp_microphone", nil)
-                card:add_to_deck()
-                G.consumeables:emplace(card)
-
-                local card = create_card("Amplify", G.pack_cards, nil, nil, true, true, "c_amp_oscillator", nil)
-                card:add_to_deck()
-                G.consumeables:emplace(card)
-
-                local card = create_card("Amplify", G.pack_cards, nil, nil, true, true, "c_amp_record_player", nil)
-                card:add_to_deck()
-                G.consumeables:emplace(card)
-
-                local card = create_card("Amplify", G.pack_cards, nil, nil, true, true, "c_amp_soundboard", nil)
-                card:add_to_deck()
-                G.consumeables:emplace(card)
-
-                local card = create_card("Amplify", G.pack_cards, nil, nil, true, true, "c_amp_tape_recorder", nil)
-                card:add_to_deck()
-                G.consumeables:emplace(card)
-
-                local card = create_card("Amplify", G.pack_cards, nil, nil, true, true, "c_amp_echo", nil)
-                card:add_to_deck()
-                G.consumeables:emplace(card)
-
-                local card = create_card("Amplify", G.pack_cards, nil, nil, true, true, "c_amp_equalizer", nil)
-                card:add_to_deck()
-                G.consumeables:emplace(card)
-
-                local card = create_card("Amplify", G.pack_cards, nil, nil, true, true, "c_amp_amplified", nil)
-                card:add_to_deck()
-                G.consumeables:emplace(card)
-
-                local card = create_card("Amplify", G.pack_cards, nil, nil, true, true, "c_amp_tuning_fork", nil)
-                card:add_to_deck()
-                G.consumeables:emplace(card)
-
-                return true
+              return true
             end
         }))
 
@@ -102,5 +42,5 @@ local gambler ={
 
 return {
     name = "Jokers",
-    list = {gambler}
+    list = {duper}
 }

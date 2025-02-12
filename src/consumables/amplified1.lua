@@ -17,17 +17,6 @@ local radio = {
 	end,
 
 	use = function (self, card, area, copier)
-		G.E_MANAGER:add_event(Event({
-			func = function()
-			local card = create_card('Joker', G.jokers, nil, 0, nil, nil, "j_amp_gambler", 'gambler')
-			card:add_to_deck()
-			G.jokers:emplace(card)
-			card:start_materialize()
-
-			return true
-			end
-		}))
-	
 		local chosen_joker = pseudorandom_element(G.jokers.cards, pseudoseed('amp'))
 
 		sendDebugMessage("Chosen joker: " .. inspect(chosen_joker.ability))

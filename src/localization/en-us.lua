@@ -135,10 +135,11 @@ return {
             },
         },
         Joker = {
-            j_amp_gambler = {
-                name = "Gambler",
+            j_amp_duper = {
+                name = "Duper",
                 text = {
-                   "TODO",
+                   "Creates the last",
+                   "{C:amplify}Amplify{} card used during this run"
                 },
             },
         },
