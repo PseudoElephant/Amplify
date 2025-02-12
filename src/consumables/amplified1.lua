@@ -56,10 +56,31 @@ local speaker = {
 	unlocked = true,
 	discovered = true,
 	can_use = function (self, card)
-			return true
+			return #G.jokers.highlighted > 0
 	end,
 
 	use = function (self, card, area, copier)
+		local chosen_joker = G.jokers.highlighted[1]
+
+		sendDebugMessage("Chosen Joker: " .. inspect(chosen_joker.ability))
+
+		if type(chosen_joker.ability.extra) == "table" then
+			for k, v in pairs(chosen_joker.ability.extra) do
+				if type(v) == "number" then
+					chosen_joker.ability.extra[k] = v * 1.25
+				end
+			end
+		elseif type(chosen_joker.ability.extra) == "number" then
+			chosen_joker.ability.extra = chosen_joker.ability.extra * 1.25
+		end
+		
+		chosen_joker.ability.bonus = chosen_joker.ability.bonus * 1.25
+		chosen_joker.ability.mult = chosen_joker.ability.mult * 1.25
+		chosen_joker.ability.t_chips = chosen_joker.ability.t_chips * 1.25
+		chosen_joker.ability.t_mult = chosen_joker.ability.t_mult * 1.25
+
+		card_eval_status_text(chosen_joker, 'extra', nil, nil, nil, { message = localize('k_upgrade_ex') })
+		chosen_joker:juice_up(0.3, 0.5)
 		return 
 	end
 }
