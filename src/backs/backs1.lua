@@ -9,7 +9,7 @@ local amplifydeck = {
 	discovered = true,
 	config = {
 		jokers = {
-			"j_amp_gambler"
+			"j_amp_duper"
 		},
 		consumables = {
 			"c_amp_radio", 
@@ -43,6 +43,7 @@ local amplifydeck = {
 									for k, v in ipairs(back.effect.config.jokers) do
 										local card = create_card('Joker', G.jokers, nil, nil, nil, nil, v, 'deck')
 										card:add_to_deck()
+										card:set_edition({negative = true}, true)
 										G.jokers:emplace(card)
 									end
 								return true

@@ -41,7 +41,7 @@ call :build
 echo Installing...
 copy "build\%ID%-%VERSION%.zip" "%MODS_PATH%\%ID%-%VERSION%.zip"
 powershell -Command "Expand-Archive -Path '%MODS_PATH%\%ID%-%VERSION%.zip' -DestinationPath '%MODS_PATH%' -Force"
-del "%MODS_PATH%\%ID%-%VERSION%.zip"
+del "%MODS_PATH%\%ID%-%VERSION%.zip" 2>nul
 exit /b
 
 :run
