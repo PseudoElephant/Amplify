@@ -12,14 +12,17 @@ return {
             c_amp_radio = {
                 name = "Radio",
                 text = {
-                    "{C:attention}Doubles{} stats of",
-                    "a random Joker",
+                    "Amplifies {C:attention}1{} random",
+                    "{C:attention}Joker{} by increasing",
+                    "all {C:red}stats{} by {X:mult,C:white}X2{}"
                 },
             },
             c_amp_speaker = {
                 name = "Speaker",
                 text = {
-                    "TODO",
+                    "Amplifies {C:attention}1{} selected",
+                    "{C:attention}Joker{} by increasing",
+                    "all {C:red}stats{} by {X:mult,C:white}X1.25{}"
                 },
             },
             c_amp_headphones = {
@@ -73,14 +76,16 @@ return {
             c_amp_amplified = {
                 name = "Amplified",
                 text = {
-                    "Upgrades all selected jokers",
-                    "[if possible]",
+                    "{C:green}1 in 6{} chance to amplify",
+                    "{C:attention}all{} possible {C:attention}Jokers{} by",
+                    "increasing all {C:red}stats{} by {X:mult,C:white}X2.5{}"
                 },
             },
             c_amp_tuning_fork = {
                 name = "Tuning Fork",
                 text = {
-                    "Balances stats across hand",
+                    "Balances all {C:attention}Joker{}",
+                    "{C:red}stats{} across hand"
                 },
             },
             c_amp_sonar = {
